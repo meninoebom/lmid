@@ -50,4 +50,5 @@ get_header($blog_header_element);
 	
 	<div class="clear"></div>
 </div><!-- #container -->
-<?php get_footer(); ?>
+<?php get_footer(); 
+?>

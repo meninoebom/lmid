@@ -4,7 +4,6 @@
 <!--[if IE 8]><html id="ie8" <?php language_attributes(); ?>><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
 <head>
-	
 	<meta charset="utf-8" />
 	<?php $detect = new Mobile_Detect();
 	if ((ot_get_option('responsive_layout') == 'responsive_mobile' && !$detect->isTablet()) || ot_get_option('responsive_layout') == 'responsive_all') { 

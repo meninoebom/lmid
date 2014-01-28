@@ -4,7 +4,6 @@
 <!--[if IE 8]><html id="ie8" <?php language_attributes(); ?>><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
 <head>
-	
 	<meta charset="utf-8" />
 	<?php $detect = new Mobile_Detect();
 	if ((ot_get_option('responsive_layout') == 'responsive_mobile' && !$detect->isTablet()) || ot_get_option('responsive_layout') == 'responsive_all') { 
@@ -99,7 +98,7 @@
 			<div id="menu-wrapper">
 				<?php if (!ot_get_option('header_search')) { ?>
 					<a class="toggleMenu" href="#"><?php _e('Menu', 'kickstart'); ?><span></span><div class="clear"></div></a>
-					<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul id="primary-main-menu" class=%2$s>%3$s<li class="header-search-toggle"><a href="#">'. __('Search', 'kickstart') .'</a></li></ul>', 'fallback_cb' => false)); ?>
+					<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul id="primary-main-menu" class=%2$s>%3$s<li class="header-search-toggle"><a href="#"></a></li></ul>', 'fallback_cb' => false)); ?>
 				<?php } else { ?>
 					<a class="toggleMenu" href="#"><?php _e('Menu', 'kickstart'); ?><span></span><div class="clear"></div></a>
 					<?php wp_nav_menu( array('theme_location' => 'primary', 'container' => false, 'items_wrap' => '<ul id="primary-main-menu" class=%2$s>%3$s</ul>', 'fallback_cb' => false)); ?>

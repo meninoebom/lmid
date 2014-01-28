@@ -1,9 +1,11 @@
 <?php
+
 /*	
 *	---------------------------------------------------------------------
 *	MNKY Functions
 *	--------------------------------------------------------------------- 
 */
+
 
 // Define directories
 define('MNKY_PATH', get_template_directory_uri());
@@ -16,6 +18,11 @@ define('MNKY_PLUGIN_URL', get_template_directory_uri() . '/inc/plugin');
 define('MNKY_CSS', get_template_directory_uri() . '/inc/stylesheet');
 define('MNKY_JS', get_template_directory_uri() . '/js');
 define('MNKY_IMAGES', get_template_directory_uri() . '/images');
+
+
+//Debug functions
+include_once(MNKY_INCLUDE . '/debugging.php');
+
 
 // Admin
 include_once(MNKY_ADMIN . '/ot-loader.php');
