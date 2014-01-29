@@ -23,7 +23,7 @@ $tabletBreakPoint: 980px;
 /* CSS3*/
 $blockShadow: 1px 1px 2px 2px rgba(20,20,20, 0.4), -1px -1px 1px rgba(black, 0.3);
 
-$lightWeight: 300;
+$light: 300;
 $semibold: 600;
 $bold: 700;
 $fallback-font-family: "Corbel", "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
@@ -209,8 +209,10 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 /*---------------------------------------------------------------*/
 
 #custom_header{width:940px; margin:0 auto; position: relative;}
-#subhead_full {position:relative; background: #f4f4f4; border-bottom: 2px solid $green; padding: 40px 0; height: 70px;}
+#subhead_full {position:relative; background: #f4f4f4; border-bottom: 2px solid $green; padding: 40px 0;}
 #subhead_full > div{max-width: 940px; margin: 0 auto;}
+#subhead_full h2{@include font($size: 28px, $line-height: 28px, $font-weight: $bold); margin-bottom: 22px;}
+#subhead_full span{@include font($size: 28px, $line-height: 28px, $font-weight: $light, $color: #898989);}
 #orbit-container {width:940px; margin:0 auto; padding:35px 0;}
 
 
