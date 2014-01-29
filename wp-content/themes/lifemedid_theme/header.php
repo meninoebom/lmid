@@ -33,7 +33,7 @@
 	} ?>
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|PT+Sans' rel='stylesheet' type='text/css'>
 	<!--[if IE 7 ]>
 	<link href="<?php echo MNKY_CSS ?>/ie7.css" media="screen" rel="stylesheet" type="text/css">
 	<![endif]-->
