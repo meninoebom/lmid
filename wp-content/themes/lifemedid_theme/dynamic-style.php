@@ -142,12 +142,12 @@
 		
 		h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .su-service-title, .su-tabs .su-tabs-nav span, .su-tabs .pane-title, .su_au_name, .heading-wrapper h6, .su-spoiler-title {color:<?php echo ot_get_option('heading_color'); ?>;}
 		
-		h1{font-size:<?php echo ot_get_option('h1_size'); ?>;}
-		h2{font-size:<?php echo ot_get_option('h2_size'); ?>;}
-		h3{font-size:<?php echo ot_get_option('h3_size'); ?>;}
-		h4{font-size:<?php echo ot_get_option('h4_size'); ?>;}
-		h5{font-size:<?php echo ot_get_option('h5_size'); ?>;}
-		h6{font-size:<?php echo ot_get_option('h6_size'); ?>;}
+		//h1{font-size:<?php echo ot_get_option('h1_size'); ?>;}
+		//h2{font-size:<?php echo ot_get_option('h2_size'); ?>;}
+		//h3{font-size:<?php echo ot_get_option('h3_size'); ?>;}
+		//h4{font-size:<?php echo ot_get_option('h4_size'); ?>;}
+		//h5{font-size:<?php echo ot_get_option('h5_size'); ?>;}
+		//h6{font-size:<?php echo ot_get_option('h6_size'); ?>;}
 		
 		#header-wrapper{
 		<?php 
