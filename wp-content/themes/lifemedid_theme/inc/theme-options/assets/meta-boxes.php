@@ -17,14 +17,19 @@ function _custom_meta_boxes() {
         'id'          => 'header_choice_select',
         'label'       => 'Select header element:',
         'desc'        => '',
-        'std'         => '',
+        'std'         => 'custom-element-full',
         'type'        => 'select',
         'section'     => '',
         'rows'        => '',
         'post_type'   => '',
         'taxonomy'    => '',
         'class'       => '',
-        'choices'     => array( 
+        'choices'     => array(
+          array(
+            'value'       => 'custom-element-full',
+            'label'       => 'Custom Header Element (FULL)',
+            'src'         => ''
+          ), 
           array(
             'value'       => '',
             'label'       => 'Title',
@@ -43,11 +48,6 @@ function _custom_meta_boxes() {
           array(
             'value'       => 'custom-element',
             'label'       => 'Custom Header Element',
-            'src'         => ''
-          ),
-          array(
-            'value'       => 'custom-element-full',
-            'label'       => 'Custom Header Element (FULL)',
             'src'         => ''
           )
         ),

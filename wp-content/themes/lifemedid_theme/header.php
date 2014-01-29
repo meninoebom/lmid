@@ -145,7 +145,7 @@
 			} elseif( is_404() ) {
 				_e('Error 404', 'kickstart');
 			} else { 
-				the_title(); 
+				//the_title(); 
 			} 	
 	echo '</h1>';
 	if (!ot_get_option('disable_breadcrumbs')){ mnky_breadcrumb(); }

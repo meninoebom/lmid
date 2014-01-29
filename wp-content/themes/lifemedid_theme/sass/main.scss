@@ -172,9 +172,10 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 
 /* Sub-level */
 #primary-main-menu li ul{font-size:12px; position: absolute; top:100%; margin:0 -5px 0 0; left: 0; display: block; visibility: hidden; z-index:9992; box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3); -moz-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);  -webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);}
+#primary-main-menu li:hover > a{color: $green;}
 #primary-main-menu li:hover > ul{visibility: visible;}
 #primary-main-menu li ul li {display: block; float: none; margin: 0; padding:0; }
-#primary-main-menu li ul li a{display:block; background:none; color:#555; border:none; width:160px; padding:7px 20px; margin:0; line-height:1.7; border-bottom: 1px solid rgba(0, 0, 0, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.1);}
+#primary-main-menu li ul li a{display:block; background:none; color:#555; border:none; width:220px; padding:7px 20px; margin:0; line-height:1.7; border-bottom: 1px solid rgba(0, 0, 0, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.1);}
 #primary-main-menu li ul li a{opacity:0.98; text-transform:none; }
 #primary-main-menu li ul li a:hover{opacity:1;}
 #primary-main-menu li ul li ul{margin:0; top:0px; left:200px;}
@@ -187,7 +188,7 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 
 /* Current menu item style */
 #primary-main-menu > li.current-menu-item, #primary-main-menu > li.current-menu-ancestor, #primary-main-menu > li.current_page_parent {padding-bottom:27px;}
-#primary-main-menu > li.current-menu-item > a, #primary-main-menu > li.current-menu-ancestor > a, #primary-main-menu > li.current_page_parent > a  {border:none;}
+#primary-main-menu > li.current-menu-item > a, #primary-main-menu > li.current-menu-ancestor > a, #primary-main-menu > li.current_page_parent > a  {border:none; color: $green;}
 #primary-main-menu > li.current-menu-item > a:after, #primary-main-menu > li.current-menu-ancestor > a:after, #primary-main-menu > li.current_page_parent > a:after {content: ""; width: 0; height: 0; border-style: solid; border-width: 0 3px 3px 3px; border-color: transparent transparent #f86c35 transparent; border-color:rgba(255,255,255,0)  rgba(255,255,255,0) #f86c35 rgba(255,255,255,0);  position:absolute; bottom: -5px; left: 50%; margin-left:-2px; }
 
 /* Mobile menu bar */
@@ -203,7 +204,6 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 
 
 
-
 /*---------------------------------------------------------------*/
 /* Subhead area
 /*---------------------------------------------------------------*/
@@ -214,7 +214,6 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 #subhead_full h2{@include font($size: 28px, $line-height: 28px, $font-weight: $bold); margin-bottom: 22px;}
 #subhead_full span{@include font($size: 28px, $line-height: 28px, $font-weight: $light, $color: #898989);}
 #orbit-container {width:940px; margin:0 auto; padding:35px 0;}
-
 
 
 
