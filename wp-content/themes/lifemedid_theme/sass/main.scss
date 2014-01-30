@@ -19,8 +19,22 @@ $yellowishGreen: #b5c501;
 $blue: #116a9b;
 
 /* Responsive */
-$mobileBreakPoint: 500px;
-$tabletBreakPoint: 980px;
+$mobileBreak: 480px;
+$tabletBreak: 768px;
+$desktopBreak: 980px;
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mobileBreak - 1) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $mobileBreak) and (max-width: $desktopBreak - 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktopBreak) { @content; }
+  }
+}
+
 
 /* CSS3*/
 $blockShadow: 1px 1px 2px 2px rgba(20,20,20, 0.4), -1px -1px 1px rgba(black, 0.3);
@@ -211,7 +225,7 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 #homepage-hero {height: 407px; width: 1920px; margin-left: -960px; position: absolute; left: 50%; background: url('../images/homepage-hero.jpg');}
 #homepage-hero .homepage-hero-inner {@include clearfix; position: absolute; left: 50%; top: 121px; max-width: 425px;}
 #homepage-hero .slogan {padding: 14px 17px 14px 17px; margin-bottom: 10px; float: left; @include font($size: 28px, $font-weight: $bold, $line-height: 28px, $color: #fff); background: $green; max-width: 425px;}
-#homepage-hero .learn-more-button {text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $darkGreen; width: 125px;}
+#homepage-hero .learn-more-button {display: block; text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $darkGreen; width: 125px;}
 
 /*---------------------------------------------------------------*/
 /* Subhead area
@@ -251,12 +265,12 @@ h2.post-title{font-size:19px; font-weight:bold; margin-bottom:15px;}
 .resources #title-wrapper{background-image: url('../images/resources-title-bg.png');}
 .partners #title-wrapper{background-image: url('../images/partners-title-bg.jpg');}
 .partners #title-wrapper{background-image: url('../images/partners-title-bg.png');}
-.about #title-wrapper{background-image: url('../images/about-title-bg.jpg');}
-.about #title-wrapper{background-image: url('../images/about-title-bg.png');}
+.about-us #title-wrapper{background-image: url('../images/about-title-bg.jpg');}
+.about-us #title-wrapper{background-image: url('../images/about-title-bg.png');}
 .contact #title-wrapper{background-image: url('../images/contact-title-bg.jpg');}
 .contact #title-wrapper{background-image: url('../images/contact-title-bg.png');}
 
-.page-title h1{font-size:19px; line-height: 1.1; color:#444444; padding: 30px 20px 28px; margin:0; float:left; position:relative; z-index:101;}
+.page-title h1{font-size:19px; line-height: 1.1; color:#444444; padding: 30px 20px 28px; margin:0; float:left; position:relative; z-index:101; background: transparent url('../images/page-title-trans-bg.png') repeat top left;}
 .page-title{width:940px; margin:0 auto;}
 
 /* Custom heading */
@@ -332,16 +346,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 
 #footer{}
 #footer-contact{@include clearfix; background: $yellowishGreen; color: #fff; padding: 48px 0 20px 0;}
-#footer-contact > div {width: 940px; margin: 0 auto;}
+#footer-contact > div {max-width: 940px; margin: 0 auto;
+	@include respond-to(mobile) {padding: 0 20px;}
+	@include respond-to(tablet) {padding: 0 20px;}
+}
 #footer-contact h2 {@include font($size: 28px, $color: #fff, $font-weight: bold);}
-#footer-contact p {@include font($font-family: 'PT Sans', $size: 13px, $line-height: 20px, $color: #fff); float: left; margin-bottom: 30px;}
-#footer-contact .footer-contact-button {display: block; @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); letter-spacing: -0.07em; padding: 12px 0 11px 21px; width: 104px; text-transform: uppercase; background: $darkGreen url('../images/contact-btn-down-arrow.png') no-repeat 90px 14px; float: right; margin-right: 20px;}
-#footer-contact .footer-contact-content {max-width: 740px; float: left;}
+#footer-contact p {@include font($font-family: 'PT Sans', $size: 13px, $line-height: 20px, $color: #fff); margin-bottom: 30px; @include clearfix;}
+#footer-contact .footer-contact-button {display: block; @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); letter-spacing: -0.07em; padding: 12px 0 11px 21px; width: 104px; text-transform: uppercase; background: $darkGreen url('../images/contact-btn-down-arrow.png') no-repeat 90px 14px; float: right; margin-right: 20px;
+	@include respond-to(mobile) {margin: 0 auto; float: none;}
+}
+#footer-contact .footer-contact-content {max-width: 740px; float: left; 
+	@include respond-to(mobile) {margin: 0 auto; float: none;}
+}
 #footer-contact .footer-contact-link {color: #fff;font-weight: $bold; text-decoration: underline;}
 
 #footer-main {@include clearfix; background: $darkGreen; color: #fff; padding: 60px 0 90px 0;}
 #footer-main > div {width: 940px; margin: 0 auto;}
-#footer-main h3 {@include font($font-weight: $bold, $size: 13px, $color: #fff, $line-height: 13px); text-transform: uppercase; margin-bottom: 11px;}
+#footer-wrapper .widget-title span  {@include font($font-weight: $bold, $size: 13px, $color: #fff, $line-height: 13px); text-transform: uppercase; margin-bottom: 11px;}
 #footer-main ul {margin-left: 13px; list-style-image: url('../images/footer-list-bullet.png');}
 #footer-main ul li {margin-bottom: 15px;}
 #footer-main ul li a {@include font($size: 13px, $color: #fff, $line-height: 13px);}
@@ -353,19 +374,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #footer-logo-container > div {width: 940px; margin: 0 auto;}
 #footer-logo-container h3 {@include font($size: 13px, $color: #fff);}
 #footer-logo-container span, #footer-logo-container a {color: #646464;}
-#footer-logo-container img {float: right; margin-top: 4px;}
 
 .footer-column-header-underline {@include clearfix;}
 .footer-column-header-underline-green {height: 2px; background: $green; width: 40px; float: left; margin-bottom: 32px;}
 .footer-column-header-underline-white {height: 2px; background: #fff; width: 180px; float: left; margin-bottom: 32px;}
 
-#footer #social-icons h3 {margin: 13px 0 13px 0;}
-#footer #social-icons ul {list-style: none; margin: 0;}
-#footer #social-icons ul li {float: left; margin-right: 5px;}
-#footer #social-icons ul li a{display: block; height: 25px; width: 25px; text-indent: -9999px;}
-#footer #social-icons ul li a.facebook{background: transparent url('../images/facebook.png') no-repeat top left;}
-#footer #social-icons ul li a.twitter {background: transparent url('../images/twitter.png') no-repeat top left;}
-#footer #social-icons ul li a.dribble {background: transparent url('../images/dribble.png') no-repeat top left;}
+#footer-wrapper #social-icons  {@include clearfix;}
+#footer-wrapper #social-icons ul li:before {content: none;}
+#footer-wrapper #social-icons strong {margin: 13px 0 13px 0; text-transform: uppercase; display: block;}
+#footer-wrapper #social-icons ul {list-style: none; margin: 0;}
+#footer-wrapper #social-icons ul li {float: left; margin-right: 5px; padding: 0}
+#footer-wrapper #social-icons ul li a{display: block; height: 25px; width: 25px; text-indent: -9999px;}
+#footer-wrapper #social-icons ul li a.facebook{background: transparent url('../images/facebook.png') no-repeat 0 0;}
+#footer-wrapper #social-icons ul li a.twitter {background: transparent url('../images/twitter.png') no-repeat 0 2px;}
+#footer-wrapper #social-icons ul li a.dribble {background: transparent url('../images/dribble.png') no-repeat 0 0;}
+
+
+
+/*---------------------------------------------------------------*/
+/* Copyright area
+/*---------------------------------------------------------------*/
+
+#copyright-container {
+	@include respond-to(tablet) { text-align: center;}
+	@include respond-to(mobile) { text-align: center;}
+}
+
+#copyright-container img {
+	@include respond-to(mobile) {margin-top: 10px; float: none;}
+	@include respond-to(tablet) {margin-top: 10px; float: none;}
+  	@include respond-to(desktop) {margin-top: 4px; float: right;}
+}
+
+#copyright-wrapper{width:100%; background:#282A2B;}
+#copyright-container{width:940px; margin:0 auto; padding: 16px 0px;}
+#copyright {width:470px; float:left; overflow:hidden; color:#b8b4b4; font-size: 11px;}
+#copyright a, #footer-menu a{color:#BCBCBC;}
+#footer-menu{float:right; text-align:right; font-size: 11px;}
+#footer-menu ul{list-style:none; margin:0;}
+#footer-menu ul li{float:left; }
+#footer-menu ul li a{padding:0 12px; border-right: 1px solid #1E1E1E; box-shadow: 1px 0px 0px rgba(224, 224, 224, 0.102); -moz-box-shadow: 1px 0px 0px rgba(224, 224, 224, 0.102); -webkit-box-shadow: 1px 0px 0px rgba(224, 224, 224, 0.102);}
+#footer-menu ul li:last-child a{padding-right:0px; border-right: none; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;}
+
+
 
 /*---------------------------------------------------------------*/
 /* Sidebars
@@ -414,7 +465,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 .widget-area ul.xoxo li.widget-container ul li {padding: 9px 0; margin:0; border-bottom:1px solid #EDEDED;}
 .widget-area ul.xoxo li.widget-container ul li:first-child {padding-top:0px;}
 .widget-area ul.xoxo li.widget-container ul li:last-child {padding-bottom:0px; border-bottom:none; box-shadow: none; -moz-box-shadow: none;  -webkit-box-shadow: none;}
-.widget-area ul.xoxo li.widget-container ul li:before {content: "\e411"; font-family: moon; color:#999; font-size:10px; speak: none; font-style: normal; font-weight: normal; line-height: 1; padding-right:10px; cursor:default; -webkit-font-smoothing: antialiased;}
+.widget-area ul.xoxo li.widget-container ul li:before {content: "\e411"; font-family: moon; color:#FFF; font-size:10px; speak: none; font-style: normal; font-weight: normal; line-height: 1; padding-right:10px; cursor:default; -webkit-font-smoothing: antialiased;}
 .widget-title{color:#696969; font-weight:bold; font-size: 11px; padding:0 0 5px; margin:0; text-transform:uppercase;}
 .widget-title span {padding: 0px 0px;}
 .sidebar-line{width:100%; height:1px; background:#ccc; margin-bottom:25px;}
@@ -422,10 +473,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 
 /* Footer widget style */
 #footer-widget-area .widget-area ul.xoxo li.widget-container {margin:0 0 30px; padding:0;}
-#footer-widget-area .widget-area ul.xoxo li.widget-container ul li {border-bottom:1px solid #232323; box-shadow: 0px 1px 0px rgba(224, 224, 224, 0.14); -moz-box-shadow: 0px 1px 0px rgba(224, 224, 224, 0.14);  -webkit-box-shadow: 0px 1px 0px rgba(224, 224, 224, 0.14); }
+#footer-widget-area .widget-area ul.xoxo li.widget-container ul li {border-bottom:none; box-shadow: 0px 1px 0px rgba(224, 224, 224, 0.01); -moz-box-shadow: 0px 1px 0px rgba(224, 224, 224, 0.01);  -webkit-box-shadow: 0px 1px 0px rgba(224, 224, 224, 0.01); }
 #footer-widget-area .widget-area ul.xoxo li.widget-container ul li:last-child {border-bottom:none; box-shadow: none; -moz-box-shadow: none;  -webkit-box-shadow: none;}
 #footer-widget-area .widget-title{color:#EAEAEA;}
-#footer-widget-area .sidebar-line{background:#7E7E7E; }
+#footer-widget-area .sidebar-line{background:#FFF; }
 
 /* Top bar widget style */
 #top-bar ul {font-size:12px; list-style:none; margin:0;}
@@ -500,20 +551,6 @@ input.s{width: 207px; font-size:10px; color:#A1A1A1; height:22px; padding:2px 30
 #footer-widget-area #wp-calendar tbody .pad {border:1px solid #444444; background: #444444;}
 #footer-widget-area #wp-calendar tfoot td{border:1px solid #444444; background: #383838;}
 
-
-/*---------------------------------------------------------------*/
-/* Copyright area
-/*---------------------------------------------------------------*/
-
-#copyright-wrapper{width:100%; background:#282A2B;}
-#copyright-container{width:940px; margin:0 auto; padding: 16px 0px;}
-#copyright {width:470px; float:left; overflow:hidden; color:#b8b4b4; font-size: 11px;}
-#copyright a, #footer-menu a{color:#BCBCBC;}
-#footer-menu{float:right; text-align:right; font-size: 11px;}
-#footer-menu ul{list-style:none; margin:0;}
-#footer-menu ul li{float:left; }
-#footer-menu ul li a{padding:0 12px; border-right: 1px solid #1E1E1E; box-shadow: 1px 0px 0px rgba(224, 224, 224, 0.102); -moz-box-shadow: 1px 0px 0px rgba(224, 224, 224, 0.102); -webkit-box-shadow: 1px 0px 0px rgba(224, 224, 224, 0.102);}
-#footer-menu ul li:last-child a{padding-right:0px; border-right: none; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;}
 
 
 /*---------------------------------------------------------------*/
@@ -692,3 +729,5 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 @import "ie";
+@import 'tablet';
+@import 'mobile';

@@ -93,7 +93,7 @@
 		$google_page_font = ot_get_option('google_page_font');
 		$page_font_family = $google_page_font['font-family'];
 		$page_font_family = str_replace("+", " ", $page_font_family);
-		echo 'font-family:'. $page_font_family .', sans-serif;';
+		echo 'font-family: Source Sans Pro, sans-serif;';
 		echo 'font-weight:'. $google_page_font['font-weight'] .';'; 
 		echo 'letter-spacing:'. $google_page_font['letter-spacing'] .';'; 
 		echo 'text-transform:'. $google_page_font['text-transform'] .';'; 

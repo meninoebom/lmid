@@ -51,7 +51,6 @@
 		$parentID = $post->post_parent;
 		$parent = get_page($parentID);
     	$parentSlug = $parent->post_name;
-    	echo $parentSlug;
 		?>
 <body <?php body_class('default-header'.' '.$parentSlug); ?>>
 <!-- Layout wrapper -->
