@@ -4,10 +4,9 @@
 	<div>
 		<h2>Contact</h2>
 		<div class="footer-contact-content">
-			<p>Interested in learning more about the LifeMed ID solutions or seeing a demo? Let us know how to contact you and we’ll be in touch. </p>
-			<p>Toll Free: 888.550.6550   |   Fax: 916.677.8420   |   info@lifemedid.com<br />LifeMed ID, Inc.  - 6349 Auburn Blvd., Citrus Heights, CA 95621 </p>
+			<p>Interested in learning more about the LifeMed ID solutions or seeing a demo? <a class="footer-contact-link" href="">Let us know how to contact you</a> and we’ll be in touch.</p>
 		</div>
-		<?php echo '<img src="'.get_template_directory_uri().'/images/smart-phone-icon.png" />' ?>
+		<a href="" class="footer-contact-button">Lets Talk</a>
 	</div>
 </div>
 
@@ -21,9 +20,9 @@
 			<div id="social-icons">
 				<h3>Get Social With Us</h3>
 				<ul>
-						<li><a href="" class="facebook">facebook</a></li>
-						<li><a href="" class="twitter">twitter</a></li>
-						<li><a href="" class="dribble">dribble</a></li>
+					<li><a href="" class="facebook">facebook</a></li>
+					<li><a href="" class="twitter">twitter</a></li>
+					<li><a href="" class="dribble">dribble</a></li>
 				</ul>
 			</div>
 		</div>
@@ -63,7 +62,7 @@
 </div>
 <div id="footer-logo-container">
 	<div>
-		<span><?php echo ot_get_option('copyright_area_text') ?></span>
+		<span>Toll Free: 888.550.6550   |   Fax: 916.677.8420   |   info@lifemedid.com   |   LifeMed ID, Inc.  - 6349 Auburn Blvd., Citrus Heights, CA 95621 </span>
 		<?php echo '<img id="footer-logo" src="'.get_template_directory_uri().'/images/lmid-logo-footer.png" />' ?>
 	</div>
 </div>

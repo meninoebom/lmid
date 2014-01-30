@@ -47,7 +47,13 @@
 	<?php echo ot_get_option('analytics_code'); ?>  
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class('default-header'); ?>>
+    	<?php
+		$parentID = $post->post_parent;
+		$parent = get_page($parentID);
+    	$parentSlug = $parent->post_name;
+    	echo $parentSlug;
+		?>
+<body <?php body_class('default-header'.' '.$parentSlug); ?>>
 <!-- Layout wrapper -->
 	<div id="layout-wrapper" class="<?php echo ot_get_option('theme_layout', 'full-width'); ?>">
 
@@ -91,7 +97,7 @@
 					}
 				}
 				
-				?>
+				?> 
 			</div>
 			
 			<?php get_sidebar('header') ?>
@@ -145,7 +151,7 @@
 			} elseif( is_404() ) {
 				_e('Error 404', 'kickstart');
 			} else { 
-				//the_title(); 
+				the_title(); 
 			} 	
 	echo '</h1>';
 	if (!ot_get_option('disable_breadcrumbs')){ mnky_breadcrumb(); }

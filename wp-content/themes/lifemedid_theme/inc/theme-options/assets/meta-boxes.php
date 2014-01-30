@@ -17,7 +17,7 @@ function _custom_meta_boxes() {
         'id'          => 'header_choice_select',
         'label'       => 'Select header element:',
         'desc'        => '',
-        'std'         => 'custom-element-full',
+        'std'         => 'title',
         'type'        => 'select',
         'section'     => '',
         'rows'        => '',
