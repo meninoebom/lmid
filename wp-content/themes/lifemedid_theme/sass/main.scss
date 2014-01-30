@@ -205,6 +205,13 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 #header-search-wrapper input.s:focus{outline: none;}
 
 
+/*---------------------------------------------------------------*/
+/*Homepage header
+/*---------------------------------------------------------------*/
+#homepage-hero {height: 407px; width: 1920px; margin-left: -960px; position: absolute; left: 50%; background: url('../images/homepage-hero.jpg');}
+#homepage-hero .homepage-hero-inner {@include clearfix; position: absolute; left: 50%; top: 121px; max-width: 425px;}
+#homepage-hero .slogan {padding: 14px 17px 14px 17px; margin-bottom: 10px; float: left; @include font($size: 28px, $font-weight: $bold, $line-height: 28px, $color: #fff); background: $green; max-width: 425px;}
+#homepage-hero .learn-more-button {text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $darkGreen; width: 125px;}
 
 /*---------------------------------------------------------------*/
 /* Subhead area
@@ -212,7 +219,7 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 
 #custom_header{max-width:940px; margin:0 auto; position: relative;}
 #subhead_full {@include clearfix; position:relative; background: #f4f4f4; border-bottom: 2px solid $green; height: 407px;}
-#subhead_full > div{height: 407px; width: 1920px; margin-left: -960px; position: absolute; left: 50%; background: url('../images/homepage-hero.jpg');}
+#subhead_full > div{}
 #subhead_full h2{@include font($size: 28px, $line-height: 28px, $font-weight: $bold); margin-bottom: 22px;}
 #subhead_full span{@include font($size: 28px, $line-height: 28px, $font-weight: $light, $color: #898989);}
 #orbit-container {width:940px; margin:0 auto; padding:35px 0;}
