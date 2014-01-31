@@ -232,7 +232,7 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 	@include respond-to(tablet) {position: relative; margin: 121px auto 0; float: none;left: 0; top: 0; padding: 0 20px;}
 }
 .homepage-hero-inner  .slogan {padding: 14px 17px 14px 17px; margin-bottom: 10px; float: left; @include font($size: 28px, $font-weight: $bold, $line-height: 28px, $color: #fff); background: $lightBlue; max-width: 425px;}
-.homepage-hero-inner  .learn-more-button {display: block; text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $blue; width: 125px;}
+.homepage-hero-inner  .learn-more-button {display: block; text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $blue; min-width:93px; padding: 0 16px}
 
 /*---------------------------------------------------------------*/
 /* Subhead area
@@ -255,6 +255,8 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 .homepage-graphics {border: 1px solid #cccccc;}
 .prod-icon {display: block; text-align: center;}
 .prod-icon span {display: block; text-align: center;}
+.homepage-video-cta {@include font($font-family: 'PT Sans', $size: 13px); text-transform: capitalize;}
+.homepage-graphic-learn-more-link {@include font($font-family: 'PT Sans', $size: 14px); text-transform: capitalize;}
 
 /* Content area */
 #wrapper{width:940px; margin:40px auto;}
@@ -365,9 +367,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 }
 #footer-contact h2 {@include font($size: 28px, $color: #fff, $font-weight: bold);}
 #footer-contact p {@include font($font-family: 'PT Sans', $size: 13px, $line-height: 20px, $color: #fff); margin-bottom: 30px; @include clearfix;}
-#footer-contact .footer-contact-button {display: block; @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); letter-spacing: -0.07em; padding: 12px 0 11px 21px; width: 104px; text-transform: uppercase; background: $blue url('../images/down-caret.png') no-repeat 90px 14px; float: right; margin-right: 20px;
+#footer-contact .footer-contact-btn {display: block; @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); letter-spacing: -0.07em; padding: 12px 0 11px 21px; width: 104px; text-transform: uppercase; background: $blue; float: right; margin-right: 20px;
 	@include respond-to(mobile) {margin: 0 auto; float: none;}
 }
+#footer-contact .footer-contact-btn-down-caret {margin-left: 7px;}
 #footer-contact .footer-contact-content {max-width: 740px; float: left; 
 	@include respond-to(mobile) {margin: 0 auto; float: none;}
 }

@@ -6,7 +6,7 @@
 		<div class="footer-contact-content">
 			<p>Interested in learning more about the LifeMed ID solutions or seeing a demo? <a class="footer-contact-link" href="">Let us know how to contact you</a> and we’ll be in touch.</p>
 		</div>
-		<a href="" class="footer-contact-button">Lets Talk</a>
+		<a href="" class="footer-contact-btn">Lets Talk <?php echo '<img class="footer-contact-btn-down-caret" src="'.get_template_directory_uri().'/images/down-caret.png" />'?> </a>
 	</div>
 </div>
 
