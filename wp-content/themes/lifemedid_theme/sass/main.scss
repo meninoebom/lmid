@@ -23,6 +23,13 @@ $mobileBreak: 480px;
 $tabletBreak: 768px;
 $desktopBreak: 980px;
 
+/*--------------------------------------------------------------*/
+/*respond-to mixin
+/*How to use:
+	@include respond-to(mobile) {margin-top: 10px; float: none;}
+	@include respond-to(tablet) {margin-top: 10px; float: none;}
+  	@include respond-to(desktop) {margin-top: 4px; float: right;}
+/*--------------------------------------------------------------*/
 @mixin respond-to($media) {
   @if $media == mobile {
     @media only screen and (max-width: $mobileBreak - 1) { @content; }
@@ -144,8 +151,6 @@ th:last-child {-moz-border-radius: 0 6px 0 0; -webkit-border-radius: 0 6px 0 0; 
 th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0;border-radius: 6px 6px 0 0;}
 
 
-
-
 /*---------------------------------------------------------------*/
 /* Layout wrapper
 /*---------------------------------------------------------------*/
@@ -158,8 +163,6 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 
 /* Full width layout */
 #layout-wrapper.full-width{width:100%; background:#fff; overflow-x: hidden;} 
-
-
 
 
 /*---------------------------------------------------------------*/
@@ -191,7 +194,7 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 #primary-main-menu li:hover > a{color: $green;}
 #primary-main-menu li:hover > ul{visibility: visible;}
 #primary-main-menu li ul li {display: block; float: none; margin: 0; padding:0; }
-#primary-main-menu li ul li a{display:block; background:none; color:#555; border:none; width:220px; padding:7px 20px; margin:0; line-height:1.7; border-bottom: 1px solid rgba(0, 0, 0, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.1);}
+#primary-main-menu li ul li a{display:block; background:none; color:#555; border:none; width:248px; padding:7px 20px; margin:0; line-height:1.7; border-bottom: 1px solid rgba(0, 0, 0, 0.2); border-top: 1px solid rgba(255, 255, 255, 0.1);}
 #primary-main-menu li ul li a{opacity:0.98; text-transform:none; }
 #primary-main-menu li ul li a:hover{opacity:1;}
 #primary-main-menu li ul li ul{margin:0; top:0px; left:200px;}
@@ -222,10 +225,13 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 /*---------------------------------------------------------------*/
 /*Homepage header
 /*---------------------------------------------------------------*/
-#homepage-hero {height: 407px; width: 1920px; margin-left: -960px; position: absolute; left: 50%; background: url('../images/homepage-hero.jpg');}
-#homepage-hero .homepage-hero-inner {@include clearfix; position: absolute; left: 50%; top: 121px; max-width: 425px;}
-#homepage-hero .slogan {padding: 14px 17px 14px 17px; margin-bottom: 10px; float: left; @include font($size: 28px, $font-weight: $bold, $line-height: 28px, $color: #fff); background: $green; max-width: 425px;}
-#homepage-hero .learn-more-button {display: block; text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $darkGreen; width: 125px;}
+#homepage-hero {height: 407px; width: 2600px; margin-left: -1300px; position: absolute; left: 50%; background: url('../images/homepage-hero.jpg');}
+.homepage-hero-inner {@include clearfix; position: absolute; left: 50%; top: 121px; max-width: 425px;
+	@include respond-to(mobile) {position: relative; margin: 121px auto 0; float: none; left: 0; top: 0; padding: 0 20px;}
+	@include respond-to(tablet) {position: relative; margin: 121px auto 0; float: none;left: 0; top: 0; padding: 0 20px;}
+}
+.homepage-hero-inner  .slogan {padding: 14px 17px 14px 17px; margin-bottom: 10px; float: left; @include font($size: 28px, $font-weight: $bold, $line-height: 28px, $color: #fff); background: $green; max-width: 425px;}
+.homepage-hero-inner  .learn-more-button {display: block; text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $darkGreen; width: 125px;}
 
 /*---------------------------------------------------------------*/
 /* Subhead area
