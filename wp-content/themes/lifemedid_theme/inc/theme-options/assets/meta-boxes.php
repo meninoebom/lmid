@@ -26,11 +26,6 @@ function _custom_meta_boxes() {
         'class'       => '',
         'choices'     => array(
           array(
-            'value'       => 'custom-element-full',
-            'label'       => 'Custom Header Element (FULL)',
-            'src'         => ''
-          ), 
-          array(
             'value'       => '',
             'label'       => 'Title',
             'src'         => ''
@@ -48,6 +43,11 @@ function _custom_meta_boxes() {
           array(
             'value'       => 'custom-element',
             'label'       => 'Custom Header Element',
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'custom-element-full',
+            'label'       => 'Custom Header Element (FULL)',
             'src'         => ''
           )
         ),
