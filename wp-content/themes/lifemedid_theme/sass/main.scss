@@ -250,14 +250,6 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 /* Content
 /*---------------------------------------------------------------*/
 
-
-/* Home page */
-.homepage-graphics {border: 1px solid #cccccc;}
-.prod-icon {display: block; text-align: center;}
-.prod-icon span {display: block; text-align: center;}
-.homepage-video-cta {@include font($font-family: 'PT Sans', $size: 13px); text-transform: capitalize;}
-.homepage-graphic-learn-more-link {@include font($font-family: 'PT Sans', $size: 14px); text-transform: capitalize;}
-
 /* Content area */
 #wrapper{width:940px; margin:40px auto;}
 #wrapper #content_left {float:left; width:650px;}
@@ -468,6 +460,50 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #footer-widget-area.columns-3 .widget-area{width: 300px;}
 #footer-widget-area.columns-4 .widget-area{width:220px;}
 
+
+/*---------------------------------------------------------------*/
+/* Pages
+/*---------------------------------------------------------------*/
+
+/* Home page */
+.homepage-graphics {border: 1px solid #cccccc;}
+.prod-icon {display: block; text-align: center;}
+.prod-icon span {display: block; text-align: center;}
+.homepage-video-cta {@include font($font-family: 'PT Sans', $size: 13px); text-transform: capitalize;}
+.homepage-graphic-learn-more-link {@include font($font-family: 'PT Sans', $size: 14px); text-transform: capitalize;}
+
+.resources .su-fancy-link, .products .su-fancy-link, .solutions .su-fancy-link {@include font($font-family: "PT-Sans"); font-size: 13px !important;}
+.resources .service-content, .products .service-content, .solutions .service-content {@include font($font-family: "PT-Sans", $color: #7a7a7a); font-size: 13px !important;}
+.resources .service-content h5, .products .service-content h5, .solutions .service-content h5 {@include font($font-weight: $bold, $color: #000); font-size: 19px !important;}
+
+/* Products page*/
+.prod-page-icon{}
+.prod-page-securereg-id-icon{margin: 0 0 -52px -1px;}
+.prod-page-securereg-link-icon{margin: 0 0 -34px -8px;}
+.prod-page-securehub-physician-icon{margin: 0 0 -44px -7px;}
+.prod-page-hl7-icon{margin: 0 0 -52px -1px;}
+.prod-page-securereg-integrated-icon{margin: 0 0 -47px -1px;}
+.prod-page-ems-gateway-icon{margin: 0 0 -38px -14px;}
+.prod-page-patient-id-device-icon{margin: 0 0 -52px -1px;}
+.prod-page-recard-depup-icon{margin: 0 0 -52px -1px;}
+
+/* Solutions page*/
+.solutions-page-icon{}
+.solutions-page-patient-id-mgmt-icon {margin: 0 0 -52px -1px;}
+.solutions-page-patient-access-icon {margin: 0 0 -52px -1px;}
+.solutions-page-hie-integration-icon {margin: 0 0 -52px -1px;}
+.solutions-page-gov-health-systems-icon {margin: 0 0 -52px -1px;}
+.solutions-page-workflow-integration-icon {margin: 0 0 -52px -1px;}
+.solutions-page-practice-mgmt-inter-icon {margin: 0 0 -52px -1px;}
+.solutions-page-regenio-health-sys-icon {margin: 0 0 -52px -1px;}
+.solutions-page-patient-satisfaction-icon {margin: 0 0 -52px -1px;}
+
+/* Resources page*/
+.resources-page-icon{}
+.resources-page-research-icon{margin: 0 0 -52px 1px;}
+.resources-tools-icon{margin: 0 0 -52px 1px;}
+.resources-page-whitepapers-icon{margin: 0 0 -52px 1px;}
+.resources-page-webinars-icon{margin: 0 0 -52px 1px;}
 
 /*---------------------------------------------------------------*/
 /* Widgets
