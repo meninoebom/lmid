@@ -478,14 +478,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 
 /* Products page*/
 .prod-page-icon{}
-.prod-page-securereg-id-icon{margin: 0 0 -52px -1px;}
-.prod-page-securereg-link-icon{margin: 0 0 -34px -8px;}
-.prod-page-securehub-physician-icon{margin: 0 0 -44px -7px;}
-.prod-page-hl7-icon{margin: 0 0 -52px -1px;}
-.prod-page-securereg-integrated-icon{margin: 0 0 -47px -1px;}
-.prod-page-ems-gateway-icon{margin: 0 0 -38px -14px;}
-.prod-page-patient-id-device-icon{margin: 0 0 -52px -1px;}
-.prod-page-recard-depup-icon{margin: 0 0 -52px -1px;}
+.prod-page-securereg-id-icon {margin: 0 0 -52px -1px;}
+.prod-page-securereg-link-icon {margin: 0 0 -34px -8px;}
+.prod-page-securehub-physician-icon {margin: 0 0 -44px -7px;}
+.prod-page-hl7-icon {margin: 0 0 -52px -1px;}
+.prod-page-securereg-integrated-icon {margin: 0 0 -47px -1px;}
+.prod-page-ems-gateway-icon {margin: 0 0 -38px -14px;}
+.prod-page-patient-id-device-icon {margin: 0 0 -52px -1px;}
+.prod-page-recard-depup-icon {margin: 0 0 -52px -1px;}
 
 /* Solutions page*/
 .solutions-page-icon{}
@@ -499,11 +499,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 .solutions-page-patient-satisfaction-icon {margin: 0 0 -52px -1px;}
 
 /* Resources page*/
-.resources-page-icon{}
-.resources-page-research-icon{margin: 0 0 -52px 1px;}
-.resources-tools-icon{margin: 0 0 -52px 1px;}
-.resources-page-whitepapers-icon{margin: 0 0 -52px 1px;}
-.resources-page-webinars-icon{margin: 0 0 -52px 1px;}
+.resources-page-icon {}
+.resources-page-research-icon {margin: 0 0 -52px 1px;}
+.resources-tools-icon {margin: 0 0 -52px 1px;}
+.resources-page-whitepapers-icon {margin: 0 0 -52px 1px;}
+.resources-page-webinars-icon {margin: 0 0 -52px 1px;}
+
+/* Partners page */
+.partners-main h2 {margin-bottom: 30px;}
+.partners-main p {margin-bottom: 30px;}
+.partners-main ul {margin: 0 0 25px 13px; list-style-image: url('../images/list-bullet-black.png');}
+.partners-main ul li {margin-bottom: 10px; @include font($size: 13px, $color: #000, $line-height: 15px);}
+.partners-sidebar .module-header {@include font($size: 13px, $line-height: 13px, $font-weight: $bold, $color: #444); padding-bottom: 5px; border-bottom: 1px solid #444; text-transform: uppercase; }
+.partners-sidebar .get-started {list-style: none; margin-left: 0px;}
+.partners-sidebar .get-started li {margin-bottom: 12px; line-height: 0; }
+.partners-sidebar .related-links {list-style-image: url('../images/related-links-bullet.png');}
+.partners-sidebar .related-links li {margin: 0 0 12px -5px; max-width: 264px;}
+.partners-sidebar .related-links li  a {display: block; @include font($font-family: 'PT Sans', $size: 12px, $color: #000, $line-height: 12px); padding: 10px 0 10px 31px; margin-left: -25px; background: #eaeaea;}
 
 /*---------------------------------------------------------------*/
 /* Widgets
