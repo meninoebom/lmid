@@ -30,8 +30,23 @@ jQuery(document).ready(function($) {
 				e.preventDefault();
 				$(this).parent("li").toggleClass("hover");
 			});
+			
+			//clone the overview page links because the orginal ones are no longer triggering a new location
+			$("#primary-main-menu .menu-item-has-children").each(function(){
+				if($(this).data("cloned") == true) return;
+				$(this).data("cloned", true);
+				$elem = $(this).clone().removeClass("menu-item-has-children").addClass("cloned-link");
+				$elem.find('ul').remove();
+				$elem.find('a').removeClass("parent");
+				$(this).find('ul').prepend($elem);
+			});
+
 		} 
 		else if (ww >= 979) {
+			//remove the cloned links
+			$(".cloned-link").remove();
+			$("#primary-main-menu .menu-item-has-children").data("cloned", false);
+
 			$("#primary-main-menu").show();
 			$("#primary-main-menu li").removeClass("hover");
 			$("#primary-main-menu li a").unbind('click');

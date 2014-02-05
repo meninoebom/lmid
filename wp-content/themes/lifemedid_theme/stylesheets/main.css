@@ -1604,6 +1604,12 @@ h2.post-title {
   background: transparent url("../images/dribble.png") no-repeat 0 0;
 }
 
+/* line 400, ../sass/main.scss */
+#footer-wrapper #footer-widget-area ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /*---------------------------------------------------------------*/
 /* Copyright area
 /*---------------------------------------------------------------*/
