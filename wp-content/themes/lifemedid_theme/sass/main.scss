@@ -18,6 +18,7 @@ $darkGreen: #5b954e;
 $yellowishGreen: #b5c501;
 $blue: #116a9b;
 $lightBlue: #3d9acc;
+$defaultTextSize: 18px;
 
 /* Responsive */
 $mobileBreak: 480px;
@@ -66,7 +67,7 @@ $fallback-font-family: "Corbel", "Lucida Grande", "Lucida Sans Unicode", "DejaVu
 /*---------------------------------------------------------------*/
 
 html,body{width:100%;}
-body {font-family: 'PT Sans', $fallback-font-family; line-height: 1.6; background:#F0F0F0; font-size:13px; color:#727272; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */ -webkit-text-size-adjust: 100%; 	text-rendering: optimizeLegibility;}
+body {font-family: 'PT Sans', $fallback-font-family; line-height: 1.6; background:#F0F0F0; font-size:18px; color:#727272; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */ -webkit-text-size-adjust: 100%; 	text-rendering: optimizeLegibility;}
 
 img, a img, img:focus {border: 0; outline: 0;}
 img{max-width:100%;}
@@ -277,7 +278,7 @@ h2.post-title{font-size:19px; font-weight:bold; margin-bottom:15px;}
 .contact #title-wrapper{background-image: url('../images/contact-title-bg.jpg');}
 .contact #title-wrapper{background-image: url('../images/contact-title-bg.png');}
 
-.page-title h1{font-size:19px; line-height: 1.1; color:#444444; padding: 30px 20px 28px; margin:0; float:left; position:relative; z-index:101; background: transparent url('../images/page-title-trans-bg.png') repeat top left;}
+.page-title h1{font-size:28px;  font-weight: $bold; line-height: 1.1; color:#444444; padding: 30px 20px 28px; margin:0; float:left; position:relative; z-index:101; background: transparent url('../images/page-title-trans-bg.png') repeat top left;}
 .page-title{width:940px; margin:0 auto;}
 
 /* Custom heading */
@@ -352,35 +353,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 /*---------------------------------------------------------------*/
 
 #footer{}
-#footer-contact{@include clearfix; background: $lightBlue; color: #fff; padding: 48px 0 20px 0; margin-top: 87px;}
+#footer-contact{@include clearfix; background: $lightBlue; color: #fff; padding: 48px 0 20px 0; margin-top: 87px; position: relative;}
 #footer-contact > div {max-width: 940px; margin: 0 auto;
 	@include respond-to(mobile) {padding: 0 20px;}
 	@include respond-to(tablet) {padding: 0 20px;}
 }
 #footer-contact h2 {@include font($size: 28px, $color: #fff, $font-weight: bold);}
-#footer-contact p {@include font($font-family: 'PT Sans', $size: 13px, $line-height: 20px, $color: #fff); margin-bottom: 30px; @include clearfix;}
-#footer-contact .footer-contact-btn {margin-top: -32px; display: block; @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); letter-spacing: -0.07em; padding: 12px 0 11px 21px; width: 96px; text-transform: uppercase; background: $blue; float: right; margin-right: 20px;
-	@include respond-to(mobile) {margin: 0 auto; float: none;}
+#footer-contact p {@include font($font-family: 'PT Sans', $size: 16px, $line-height: 20px, $color: #fff); margin-bottom: 30px; @include clearfix;}
+#footer-contact .footer-contact-btn {
+  margin-top: -18px; 
+  @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); 
+	@include respond-to(mobile) {position: relative; margin: 0 auto; float: none; top: 0; right: 0;}
+  display: block; 
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  letter-spacing: -0.07em; 
+  padding: 12px 0 11px 21px; 
+  width: 96px; 
+  text-transform: uppercase; 
+  background: $blue; 
+  // float: right; 
+  // margin-right: 20px;
 }
 #footer-contact .footer-contact-btn-down-caret {position: relative; bottom: 2px; left: 7px;}
-#footer-contact .footer-contact-content {max-width: 740px; float: left; 
+#footer-contact .footer-contact-content {width: 50%; float: left; 
 	@include respond-to(mobile) {margin: 0 auto; float: none;}
 }
 #footer-contact .footer-contact-link {color: #fff;font-weight: $bold; text-decoration: underline;}
 
 #footer-main {@include clearfix; background: $blue; color: #fff; padding: 60px 0 90px 0;}
 #footer-main > div {width: 940px; margin: 0 auto;}
-#footer-wrapper .widget-title span  {@include font($font-weight: $bold, $size: 13px, $color: #fff, $line-height: 13px); text-transform: uppercase; margin-bottom: 11px;}
+#footer-wrapper, #footer-wrapper p {font-size: 16px;}
+#footer-wrapper .widget-title span  {@include font($font-weight: $bold, $size: 16px, $color: #fff, $line-height: 13px); text-transform: uppercase; margin-bottom: 11px;}
 #footer-main ul {margin-left: 13px; list-style-image: url('../images/footer-list-bullet.png');}
 #footer-main ul li {margin-bottom: 15px;}
-#footer-main ul li a {@include font($size: 13px, $color: #fff, $line-height: 13px);}
+#footer-main ul li a {@include font($size: 16px, $color: #fff, $line-height: 16px);}
 #footer-main .footer-column {float: left; width: 220px; margin-right: 20px;}
-#footer-main .footer-column p {@include font($size: 13px, $color: #fff, $line-height: 17px); margin-bottom: 17px;}
+#footer-main .footer-column p {@include font($size: 16px, $color: #fff, $line-height: 17px); margin-bottom: 17px;}
 #footer-main .footer-column.last {margin-right: 0;}
 
 #footer-logo-container {background: #282a2b; padding: 20px 0 16px 0;}
 #footer-logo-container > div {width: 940px; margin: 0 auto;}
-#footer-logo-container h3 {@include font($size: 13px, $color: #fff);}
+#footer-logo-container h3 {@include font($size: 16px, $color: #fff);}
 #footer-logo-container span, #footer-logo-container a {color: #646464;}
 
 .footer-column-header-underline {@include clearfix;}
@@ -506,14 +521,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 .resources-page-webinars-icon {margin: 0 0 -52px 1px;}
 
 /* Partners page */
+.partners-main {
+  font-size: 18px;
+}
 .partners-main h2 {
+  font-size: 25px;
   font-weight: $light;
   margin-bottom: 30px;
   strong{font-weight: $bold}
 }
 .partners-main p {margin-bottom: 30px;}
+.partners-main h3 {font-size: 23px;}
+.partners-main h4 {font-size: 21px;}
 .partners-main ul {margin: 0 0 25px 13px; list-style-image: url('../images/list-bullet-black.png');}
-.partners-main ul li {margin-bottom: 10px; @include font($size: 13px, $color: #000, $line-height: 15px);}
+.partners-main ul li {margin-bottom: 10px; @include font($size: 15px, $color: #000, $line-height: 21px);}
 
 /* Leadership */ 
 

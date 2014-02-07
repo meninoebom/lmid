@@ -19,10 +19,8 @@ define('MNKY_CSS', get_template_directory_uri() . '/inc/stylesheet');
 define('MNKY_JS', get_template_directory_uri() . '/js');
 define('MNKY_IMAGES', get_template_directory_uri() . '/images');
 
-
 //Debug functions
 include_once(MNKY_INCLUDE . '/debugging.php');
-
 
 // Admin
 include_once(MNKY_ADMIN . '/ot-loader.php');
@@ -52,5 +50,14 @@ include_once(MNKY_PLUGIN . '/widgets/side-menu-widget.php');
 include_once(MNKY_PLUGIN . '/mobile-detect.php');
 include_once(MNKY_PLUGIN . '/woocommerce/index.php');
 
+// Re-define meta box path and URL
+define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri() . '/inc/plugin/meta-box' ) );
+define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH . '/inc/plugin/meta-box' ) );
+// Include the meta box script
+require_once RWMB_DIR . 'meta-box.php';
+// Include the meta box definition (the file where you define meta boxes, see `demo/demo.php`)
+include 'config-meta-boxes.php';
 
 ?>
+
+
