@@ -488,8 +488,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 .homepage-graphic-learn-more-link {@include font($font-family: 'PT Sans', $size: 14px); text-transform: capitalize;}
 
 .resources .su-fancy-link, .products .su-fancy-link, .solutions .su-fancy-link {@include font($font-family: "PT-Sans"); font-size: 13px !important;}
-.resources .service-content, .products .service-content, .solutions .service-content {@include font($font-family: "PT-Sans", $color: #6e6e6e); font-size: 14px !important;}
-.resources .service-content h5, .products .service-content h5, .solutions .service-content h5 {@include font($font-weight: $bold, $color: #000); font-size: 19px !important;}
+.resources .service-content, .products .service-content, .solutions .service-content {@include font($font-family: "PT-Sans", $color: #6e6e6e); font-size: 18px !important;}
+.resources .service-content h5, .products .service-content h5, .solutions .service-content h5 {@include font($font-weight: $bold, $color: #000); font-size: 22px !important;}
 
 /* Products page*/
 .prod-page-icon{}

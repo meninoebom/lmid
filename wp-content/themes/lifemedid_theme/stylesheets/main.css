@@ -1890,7 +1890,7 @@ h2.post-title {
   color: #6e6e6e;
   font-family: "PT-Sans", "Corbel", "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   font-weight: 400;
-  font-size: 14px !important;
+  font-size: 18px !important;
 }
 
 /* line 492, ../sass/main.scss */
@@ -1900,7 +1900,7 @@ h2.post-title {
   color: black;
   font-family: "Source Sans Pro", "Corbel", "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   font-weight: 700;
-  font-size: 19px !important;
+  font-size: 22px !important;
 }
 
 /* Products page*/

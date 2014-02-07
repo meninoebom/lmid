@@ -4,7 +4,7 @@
 	<?php 
 	$related_links = rwmb_meta( 'lmid_url' );
 	$num_links = count($related_links);
-	if ($num_links > 0) { ?>
+	if ($related_links && $num_links > 0) { ?>
 		<li id="text-7" class="widget-container widget_text">
 			<h3 class="widget-title"><span>Related Links</span></h3>	
 			<div class="textwidget">
