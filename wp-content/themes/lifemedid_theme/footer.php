@@ -2,7 +2,7 @@
 
 <div id="footer-contact">
 	<div>
-		<h2>Contact</h2>
+		<div class="footer-contact-header"><h2>Contact</h2></div>
 		<div class="footer-contact-content">
 			<p>Interested in learning more about the LifeMed ID solutions or seeing a demo? <a class="footer-contact-link" href="">Let us know how to contact you</a> and we’ll be in touch.</p>
 		</div>

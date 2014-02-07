@@ -73,13 +73,14 @@ img, a img, img:focus {border: 0; outline: 0;}
 img{max-width:100%;}
 textarea, input, a, textarea:focus, input:focus, a:focus { outline: none; }
 
-h1, h2, h3, h4, h5, h6 {font-weight: normal; margin-bottom:15px; color:#444444; line-height: 1.4;}
+h1, h2, h3, h4 {font-weight: normal; margin-bottom:15px; color:#444444; line-height: 1.4;}
+h5, h6 {font-weight: normal; margin-bottom:15px; color:#000000; line-height: 1.4;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; color:#444444; }
 h1{font-size:30px}
 h2{font-size:24px}
 h3{font-size:20px}
 h4{font-size:18px}
-h5{font-size:16px}
+h5{font-size:15px}
 h6{font-size:14px}
 
 p img {margin: 0;}
@@ -227,10 +228,10 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 /*---------------------------------------------------------------*/
 /*Homepage header
 /*---------------------------------------------------------------*/
-#homepage-hero {height: 407px; width: 2600px; margin-left: -1300px; position: absolute; left: 50%; background: url('../images/homepage-hero.jpg');}
-.homepage-hero-inner {@include clearfix; position: absolute; left: 50%; top: 121px; max-width: 425px;
+#homepage-hero {height: 407px; width: 2600px; margin-left: -1300px; position: absolute; left: 50%; background: url('../images/homepage-heroAlt.jpg');}
+.homepage-hero-inner {@include clearfix; position: absolute; left: 52%; top: 121px; max-width: 425px;
 	@include respond-to(mobile) {position: relative; margin: 121px auto 0; float: none; left: 0; top: 0; padding: 0 20px;}
-	@include respond-to(tablet) {position: relative; margin: 121px auto 0; float: none;left: 0; top: 0; padding: 0 20px;}
+	@include respond-to(tablet) {position: relative; float: right; margin: 121px 40px 0 0; left: 0; top: 0;}
 }
 .homepage-hero-inner  .slogan {padding: 14px 17px 14px 17px; margin-bottom: 10px; float: left; @include font($size: 28px, $font-weight: $bold, $line-height: 28px, $color: #fff); background: $lightBlue; max-width: 425px;}
 .homepage-hero-inner  .learn-more-button {display: block; text-align: center; float: left; @include font($size: 18px, $line-height: 36px, $color: #fff); text-transform: uppercase; background: $blue; width:100px; padding: 0 16px}
@@ -240,7 +241,7 @@ th:only-child{-moz-border-radius: 6px 6px 0 0;-webkit-border-radius: 6px 6px 0 0
 /*---------------------------------------------------------------*/
 
 #custom_header{max-width:940px; margin:0 auto; position: relative;}
-#subhead_full {@include clearfix; position:relative; background: #f4f4f4; border-bottom: 2px solid $lightBlue; height: 407px;}
+#subhead_full {@include clearfix; position:relative; background: #f4f4f4; height: 407px;}
 #subhead_full > div{}
 #subhead_full h2{@include font($size: 28px, $line-height: 28px, $font-weight: $bold); margin-bottom: 22px;}
 #subhead_full span{@include font($size: 28px, $line-height: 28px, $font-weight: $light, $color: #898989);}
@@ -353,16 +354,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 /*---------------------------------------------------------------*/
 
 #footer{}
-#footer-contact{@include clearfix; background: $lightBlue; color: #fff; padding: 48px 0 20px 0; margin-top: 87px; position: relative;}
-#footer-contact > div {max-width: 940px; margin: 0 auto;
-	@include respond-to(mobile) {padding: 0 20px;}
-	@include respond-to(tablet) {padding: 0 20px;}
+#footer-contact{
+  @include clearfix; background: $lightBlue; color: #fff; padding: 48px 0 20px 0; margin-top: 87px; position: relative;
 }
-#footer-contact h2 {@include font($size: 28px, $color: #fff, $font-weight: bold);}
+#footer-contact > div {max-width: 940px; margin: 0 auto;
+	//@include respond-to(mobile) {padding: 0 20px;}
+	//@include respond-to(tablet) {padding: 0 20px;}
+}
+
 #footer-contact p {@include font($font-family: 'PT Sans', $size: 16px, $line-height: 20px, $color: #fff); margin-bottom: 30px; @include clearfix;}
+.footer-contact-header {
+  @include clearfix;
+  @media only screen and (max-width: 1230px) { 
+    margin: 0 auto; float: none; text-align: center;
+  }
+  width: 75%;
+}
+#footer-contact h2 {
+  @include font($size: 28px, $color: #fff, $font-weight: bold);
+  float: left;
+}
+#footer-contact .footer-contact-content {width: 75%; float: left;
+  @media only screen and (max-width: 1230px) { 
+    margin: 0 auto; float: none;
+  }
+  @include respond-to(mobile) {margin: 0 auto; float: none;}
+}
+
 #footer-contact .footer-contact-btn {
   margin-top: -18px; 
   @include font($font-family: 'PT Sans', $size: 13px, $font-weight: $bold, $line-height: 13px, $color: #fff); 
+  @media only screen and (max-width: 1230px) { 
+    position: relative; margin: 0 auto; float: none; top: 0; right: 0;
+  }
 	@include respond-to(mobile) {position: relative; margin: 0 auto; float: none; top: 0; right: 0;}
   display: block; 
   position: absolute;
@@ -373,13 +397,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
   width: 96px; 
   text-transform: uppercase; 
   background: $blue; 
-  // float: right; 
-  // margin-right: 20px;
 }
 #footer-contact .footer-contact-btn-down-caret {position: relative; bottom: 2px; left: 7px;}
-#footer-contact .footer-contact-content {width: 50%; float: left; 
-	@include respond-to(mobile) {margin: 0 auto; float: none;}
-}
+
 #footer-contact .footer-contact-link {color: #fff;font-weight: $bold; text-decoration: underline;}
 
 #footer-main {@include clearfix; background: $blue; color: #fff; padding: 60px 0 90px 0;}
@@ -482,6 +502,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 
 /* Home page */
 .homepage-graphics {border: 1px solid #cccccc;}
+.homepage-graphics-container {
+  position: relative;
+  span{
+    display: block;
+    position: absolute;
+    color: #116a9b;
+    @include respond-to(desktop) {
+      @include font($color: #116a9b, $size: 18px, $line-height: 21px, $font-weight: 700);
+      top: 16px;
+      left: 25px;
+    }
+    @media only screen and (max-width: 979px) and (min-width: 768px) {
+      @include font($color: #116a9b, $size: 14px, $line-height: 15px, $font-weight: 700);
+      top: 11px;
+      left: 15px;
+    }
+    @media only screen and (max-width: 768px) {
+      @include font($color: #116a9b, $size: 18px, $line-height: 21px, $font-weight: 700);
+      top: 16px;
+      left: 25px;
+    }
+  }
+}
 .prod-icon {display: block; text-align: center;}
 .prod-icon span {display: block; text-align: center;}
 .homepage-video-cta {@include font($font-family: 'PT Sans', $size: 13px); text-transform: capitalize;}
