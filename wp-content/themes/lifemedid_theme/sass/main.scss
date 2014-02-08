@@ -592,8 +592,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #sidebar_right .xoxo{list-style: none; padding: 0; margin: 0;}
 #sidebar_right .xoxo > li {margin-bottom: 60px;}
 #sidebar_right .module-header, .widget-title {@include font($size: 13px, $line-height: 13px, $font-weight: $bold, $color: #444); padding-bottom: 5px; border-bottom: 1px solid #444; text-transform: uppercase; }
-#sidebar_right .get-started {list-style: none; margin-left: 0px;}
-#sidebar_right .get-started li {margin-bottom: 12px; line-height: 0; }
+#sidebar_right .get-started {
+  list-style: none; margin-left: 0px;
+  li {margin-bottom: 10px;}
+  li a {display: block; position: relative; padding-left: 75px; width: 175px; height: 32px; text-transform: uppercase; @include font($font-family: 'PT Sans', $font-weight: $bold, $size: 12px, $line-height: 32px, $color: #fff);
+    img{ padding: 0 20px; position: absolute;}
+  }
+  .request-demo {background: #ffc200;
+    img {top: 3px; left: 9px;}
+  }
+  .calculate-savings {background: #b5c501;
+    img {top: 5px; left: 15px;}
+  }
+  .download-materials {background: #5b954e;
+    img {top: 7px; left: 10px;}
+  }
+}
 #sidebar_right .related-links {list-style-image: url('../images/related-links-bullet.png');}
 #sidebar_right .related-links li {margin: 0 0 12px -5px; max-width: 264px;}
 #sidebar_right .related-links li  a {display: block; @include font($font-family: 'PT Sans', $size: 12px, $color: #000, $line-height: 12px); padding: 10px 0 10px 31px; margin-left: -25px; background: #eaeaea;}
@@ -603,7 +617,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #footer-widget-area .widget-area ul.xoxo li {list-style:none; line-height: 1.6;}
 #footer-widget-area .widget-area ul.xoxo li.widget-container {margin:0 0 40px; padding:0;}
 #footer-widget-area .widget-area ul.xoxo li.widget-container ul {margin:0; padding:0;}
-#footer-widget-area .widget-area ul.xoxo li.widget-container ul li {padding: 9px 0; margin:0; border-bottom:1px solid #EDEDED;}
+#footer-widget-area .widget-area ul.xoxo li.widget-container ul li {padding: 2px 0; margin:0; border-bottom:1px solid #EDEDED;}
 #footer-widget-area .widget-area ul.xoxo li.widget-container ul li:first-child {padding-top:0px;}
 #footer-widget-area .widget-area ul.xoxo li.widget-container ul li:last-child {padding-bottom:0px; border-bottom:none; box-shadow: none; -moz-box-shadow: none;  -webkit-box-shadow: none;}
 #footer-widget-area .widget-area ul.xoxo li.widget-container ul li:before {content: "\e411"; font-family: moon; color:#FFF; font-size:10px; speak: none; font-style: normal; font-weight: normal; line-height: 1; padding-right:10px; cursor:default; -webkit-font-smoothing: antialiased;}
