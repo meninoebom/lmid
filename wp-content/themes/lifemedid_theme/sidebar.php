@@ -5,9 +5,9 @@
 		<h3 class="widget-title"><span>Get Started</span></h3>
 		<div class="textwidget">
 			<ul class="get-started">
-				<li><a href="" class="request-demo" /><img src="<?php echo get_template_directory_uri(); ?>/images/icon-request-demo.png" />Request Demo</a></li>
-				<li><a href="" class="calculate-savings" /><img src="<?php echo get_template_directory_uri(); ?>/images/icon-savings-calc.png" />Calculate Savings</a></li>
-				<li><a href="" class="download-materials" /><img src="<?php echo get_template_directory_uri(); ?>/images/icon-download.png" />Download Materials</a></li>
+				<li><a href="<?php echo site_url(); ?>/?page_id=277&subject=demo" class="request-demo" /><img src="<?php echo get_template_directory_uri(); ?>/images/icon-request-demo.png" />Request Demo</a></li>
+				<li><a href="<?php echo site_url(); ?>/savings-calc.xls" class="calculate-savings" /><img src="<?php echo get_template_directory_uri(); ?>/images/icon-savings-calc.png" />Calculate Savings</a></li>
+				<li><a href="<?php echo site_url(); ?>/?page_id=280" class="download-materials" /><img src="<?php echo get_template_directory_uri(); ?>/images/icon-download.png" />Download Materials</a></li>
 			</ul>
 		</div>
 	</li>

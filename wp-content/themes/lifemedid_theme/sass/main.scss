@@ -129,17 +129,33 @@ input,textarea{color: #696969; font-size: 13px; background:#fff; border: 1px sol
 input {height:25px; padding:4px 10px; }
 textarea{width: 400px; overflow:hidden; padding:10px;}
 
-input[type='submit'] {display: inline-block; background-color:#f86b35; color: #fff; font-size: 13px; font-weight:bold; height: 33px; line-height:33px; padding: 0px 20px; text-align: center; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.251); text-transform: uppercase; border:none; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196); -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196); -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196); -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+//input[type='submit'] {display: inline-block; background-color:#f86b35; color: #fff; font-size: 13px; font-weight:bold; height: 33px; line-height:33px; padding: 0px 20px; text-align: center; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.251); text-transform: uppercase; border:none; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196); -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196); -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.196); -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
+// input[type='submit']:hover {color:#ffffff; 
+// background-image: -moz-linear-gradient(top,  rgba(255,255,255,0.23) 0%, rgba(255,255,255,0) 100%);
+// background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.23)), color-stop(100%,rgba(255,255,255,0)));
+// background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
+// background-image: -o-linear-gradient(top,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
+// background-image: -ms-linear-gradient(top,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
+// background-image: linear-gradient(to bottom,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', endColorstr='#00ffffff',GradientType=0 );}
+// input[type='submit']:active{color:#ffffff;}
 
-input[type='submit']:hover {color:#ffffff; 
-background-image: -moz-linear-gradient(top,  rgba(255,255,255,0.23) 0%, rgba(255,255,255,0) 100%);
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.23)), color-stop(100%,rgba(255,255,255,0)));
-background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
-background-image: -o-linear-gradient(top,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
-background-image: -ms-linear-gradient(top,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
-background-image: linear-gradient(to bottom,  rgba(255,255,255,0.23) 0%,rgba(255,255,255,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', endColorstr='#00ffffff',GradientType=0 );}
-input[type='submit']:active{color:#ffffff;}
+input[type='submit'] {
+  height: 38px;
+  margin-top: -18px; 
+  @include font($font-family: 'PT Sans', $size: 13px, $font-weight: 500, $line-height: 13px, $color: #fff); 
+  @media only screen and (max-width: 1230px) { 
+    position: relative; margin: 0 auto; float: none; top: 0; right: 0;
+  }
+  @include respond-to(mobile) {position: relative; margin: 0 auto; float: none; top: 0; right: 0;}
+  display: block; 
+  letter-spacing: 0.07em !important; 
+  padding: 12px 20px; 
+  width: 96px; 
+  text-transform: uppercase; 
+  background: $blue; 
+  font-size: 13px !important;
+}
 
 input::-moz-focus-inner { border: 0; padding: 0; margin-top:0px;}
 
@@ -583,6 +599,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 
 .staff-wrapper img{margin: 0px 0px -15px 0px; padding: 0px;}
 .staff-wrapper {margin-bottom: 30px;}
+
+/* Download Materials */
+.download-materials .entry-content {}
+.download-materials .entry-content ul {margin: 0 0 25px 13px; list-style-image: url('../images/list-bullet-black.png');}
+.download-materials .entry-content ul li {margin-bottom: 20px; @include font($size: 18px, $color: #000, $line-height: 21px);}
+.download-materials .entry-content .heading-wrapper {margin-bottom: 15px;}
+
 
 /*---------------------------------------------------------------*/
 /* Widgets

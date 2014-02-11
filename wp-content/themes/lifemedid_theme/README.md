@@ -17,3 +17,25 @@ To make preview like title area image with scroll effect go to Theme Options/Bac
 
 	Included the URL & Path Shortcodes plugin so that images can be added to the shortcode generated page content like in this example:
 		[column size="1-4" last="0"]<a href="#"><img src="[get_template_directory_uri]/images/animation-thumbnail.png" /></a>[/column]
+
+		 Below is a list of available shortcodes:
+
+		[home_url]
+		[site_url]
+		[admin_url]
+		[network_home_url]
+		[network_site_url]
+		[network_admin_url]
+		[content_url]
+		[plugins_url]
+		[wp_upload_dir]
+		[get_template_directory_uri]
+		[get_stylesheet_directory_uri]
+		[get_stylesheet_uri]
+		[get_theme_root_uri]
+		[get_stylesheet_directory]
+		[get_theme_root]
+		[get_theme_roots]
+		Note that you can pass in parameters that are available to the corresponding WordPress functions. For example:
+
+		[home_url path="faq" scheme="https"]
