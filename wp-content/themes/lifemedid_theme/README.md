@@ -39,3 +39,10 @@ To make preview like title area image with scroll effect go to Theme Options/Bac
 		Note that you can pass in parameters that are available to the corresponding WordPress functions. For example:
 
 		[home_url path="faq" scheme="https"]
+
+
+For Custom Meta Boxes
+
+-https://github.com/rilwis/meta-box/blob/master/demo/demo.php
+
+	new meta boxes are created in .../lifemedid_theme/config-meta-boxes.php
