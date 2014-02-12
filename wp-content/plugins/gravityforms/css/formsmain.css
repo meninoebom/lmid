@@ -308,6 +308,42 @@ html>body .entry ul,
 	width: 98% !important;
 }
 
+@media only screen and (max-width: 980px) { 
+	.gform_wrapper .ginput_complex .ginput_right input[type=text],
+	.gform_wrapper .ginput_complex .ginput_right input[type=url],
+	.gform_wrapper .ginput_complex .ginput_right input[type=email],
+	.gform_wrapper .ginput_complex .ginput_right input[type=tel],
+	.gform_wrapper .ginput_complex .ginput_right input[type=number],
+	.gform_wrapper .ginput_complex .ginput_right input[type=password],
+	.gform_wrapper .ginput_complex .ginput_right select {
+		width: 80% !important;
+	}
+}
+
+@media only screen and (max-width: 768px) { 
+	.gform_wrapper .ginput_complex .ginput_right input[type=text],
+	.gform_wrapper .ginput_complex .ginput_right input[type=url],
+	.gform_wrapper .ginput_complex .ginput_right input[type=email],
+	.gform_wrapper .ginput_complex .ginput_right input[type=tel],
+	.gform_wrapper .ginput_complex .ginput_right input[type=number],
+	.gform_wrapper .ginput_complex .ginput_right input[type=password],
+	.gform_wrapper .ginput_complex .ginput_right select {
+		width: 81% !important;
+	}
+}
+
+@media only screen and (max-width: 480px) { 
+	.gform_wrapper .ginput_complex .ginput_right input[type=text],
+	.gform_wrapper .ginput_complex .ginput_right input[type=url],
+	.gform_wrapper .ginput_complex .ginput_right input[type=email],
+	.gform_wrapper .ginput_complex .ginput_right input[type=tel],
+	.gform_wrapper .ginput_complex .ginput_right input[type=number],
+	.gform_wrapper .ginput_complex .ginput_right input[type=password],
+	.gform_wrapper .ginput_complex .ginput_right select {
+		width: 81% !important;
+	}
+}
+
 .gform_wrapper .ginput_complex label,
 .gform_wrapper .gfield_time_hour label,
 .gform_wrapper .gfield_time_minute label,
