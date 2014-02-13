@@ -125,7 +125,9 @@
 	<?php echo '<div id="title-wrapper"><div class="header-shadow"></div>
 		<div class="page-title size-wrap"><h1>';
 			if ( is_home() ) { 
-				wp_title ('', true); 
+				wp_title ('', true);
+			} elseif ( is_single() ) { 
+				echo "News and Press";
 			} elseif ( is_search() ) { 
 				printf( __( 'Search Results for %s', 'kickstart' ), '<span>' . get_search_query() . '</span>' );
 			} elseif ( class_exists( 'Woocommerce' ) && is_woocommerce() ) {

@@ -90,13 +90,13 @@
 		
 		.page-title h1 {
 		<?php
-		$google_page_font = ot_get_option('google_page_font');
-		$page_font_family = $google_page_font['font-family'];
-		$page_font_family = str_replace("+", " ", $page_font_family);
-		echo 'font-family: Source Sans Pro, sans-serif;';
-		echo 'font-weight:'. $google_page_font['font-weight'] .';'; 
-		echo 'letter-spacing:'. $google_page_font['letter-spacing'] .';'; 
-		echo 'text-transform:'. $google_page_font['text-transform'] .';'; 
+		//$google_page_font = ot_get_option('google_page_font');
+		//$page_font_family = $google_page_font['font-family'];
+		//$page_font_family = str_replace("+", " ", $page_font_family);
+		//echo 'font-family: Source Sans Pro, sans-serif;';
+		//echo 'font-weight:'. $google_page_font['font-weight'] .';'; 
+		//echo 'letter-spacing:'. $google_page_font['letter-spacing'] .';'; 
+		//echo 'text-transform:'. $google_page_font['text-transform'] .';'; 
 		?>
 		}
 		
@@ -202,12 +202,12 @@
 		#footer-wrapper, #copyright {color:<?php echo ot_get_option('footer_content_text_color'); ?>;}
 		#footer-wrapper a, #copyright a, #footer-menu a {color:<?php echo ot_get_option('footer_link_color'); ?>;}
 								
-		.page-title h1{color:<?php echo ot_get_option('page_title_color'); ?>;}
+		/*.page-title h1{color:<?php echo ot_get_option('page_title_color'); ?>;}
 		.page-title h1 {
 		text-shadow: <?php echo ot_get_option('page_title_shadow'); ?>; 
 		background: <?php echo ot_get_option('page_title_background'); ?>;
 		}
-		
+		*/
 		#header-wrapper #header-widget-area ul.xoxo{margin-top:<?php echo ot_get_option('header_widget_area_top'); ?>;}
 		#top-bar-wrapper{background-color:<?php echo ot_get_option('top_bar_background_color'); ?>;}
 		#top-bar-wrapper #top-bar, #top-bar-wrapper #top-bar a{color:<?php echo ot_get_option('top_bar_text_color', '#8B8B8B'); ?>;}

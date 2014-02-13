@@ -292,10 +292,11 @@ h2.post-title{font-size:19px; font-weight:bold; margin-bottom:15px;}
 .contact #title-wrapper{background-image: url('../images/title-bg-contact.jpg');}
 
 .page-title h1{
+  @include text-shadow(2px 2px 3px #888);
   font-size:37px;  
   font-weight: $bold; 
   line-height: 1.1; 
-  color: $blue; 
+  color: #fff; 
   padding: 30px 0px; 
   margin:0; float:left; 
   position:relative; z-index:101; 
@@ -487,7 +488,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 /*---------------------------------------------------------------*/
 
 /* Default sidebar */
-#default-widget-area{width: 250px;} 
+#default-widget-area{width: 250px; margin-top: 0px;} 
 #sidebar_right{float:right; margin-top:5px;}
 #sidebar_left{float:left; margin-top:5px;}
 .blog #sidebar_right, .single #sidebar_right {margin-top:0px;}
@@ -515,6 +516,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #footer-widget-area.columns-2 .widget-area{width: 460px;}
 #footer-widget-area.columns-3 .widget-area{width: 300px;}
 #footer-widget-area.columns-4 .widget-area{width:220px;}
+
+#sidebar_right .testimonials-slider .testimonial-wrapper {width: 100%;}
+
 
 
 /*---------------------------------------------------------------*/
@@ -555,7 +559,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 .resources .service-content, .products .service-content, .solutions .service-content {@include font($font-family: "PT-Sans", $color: #6e6e6e); font-size: 18px !important;}
 .resources .service-content h5, .products .service-content h5, .solutions .service-content h5 {@include font($font-weight: $bold, $color: #000); font-size: 22px !important;}
 
-.rev_slider_wrapper {border: 1px solid #ccc;}
+.rev_slider_wrapper {border: 1px solid #ccc; margin-bottom: 30px !important;}
+@media only screen and (max-width: 768px) {
+    .rev_slider_wrapper {display: none;}
+  }
 
 /* Products page*/
 .prod-page-icon{}
@@ -619,7 +626,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
   display: block;
   position: relative;
   text-align: center;
-  width: 250px;
+  width: 100%;
   height: 32px;
   text-transform: uppercase;
   font-size: 12px;
@@ -641,7 +648,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #sidebar_right .get-started {
   list-style: none; margin-left: 0px;
   li {margin-bottom: 10px;}
-  li a {display: block; position: relative; padding-left: 75px; width: 175px; height: 32px; text-transform: uppercase; @include font($font-family: 'PT Sans', $font-weight: $bold, $size: 12px, $line-height: 32px, $color: #fff);
+  li a {box-sizing: border-box; display: block; position: relative; padding-left: 75px; width: 100%; height: 32px; text-transform: uppercase; @include font($font-family: 'PT Sans', $font-weight: $bold, $size: 12px, $line-height: 32px, $color: #fff);
     img{ padding: 0 20px; position: absolute;}
   }
   .request-demo {background: #ffc200;
@@ -654,8 +661,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
     img {top: 7px; left: 10px;}
   }
 }
-#sidebar_right .related-links {list-style-image: url('../images/related-links-bullet.png');}
-#sidebar_right .related-links li {margin: 0 0 12px -5px; max-width: 264px;}
+#sidebar_right .related-links {list-style-image: url('../images/related-links-bullet.png'); margin-left: 26px;}
+#sidebar_right .related-links li {margin: 0 0 12px 0; box-sizing: border-box; width: 100%;}
 #sidebar_right .related-links li  a {display: block; @include font($font-family: 'PT Sans', $size: 12px, $color: #000, $line-height: 12px); padding: 10px 0 10px 31px; margin-left: -25px; background: #eaeaea;}
 
 /* Footer widget style */
@@ -678,6 +685,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #footer-widget-area .widget-area ul.xoxo li.widget-container ul li:last-child {border-bottom:none; box-shadow: none; -moz-box-shadow: none;  -webkit-box-shadow: none;}
 #footer-widget-area .widget-title{color:#EAEAEA;}
 #footer-widget-area .sidebar-line{background:#FFF; }
+
+.testimonial-slider-container {width: 100%}
 
 
 /* Blog Landing Page */

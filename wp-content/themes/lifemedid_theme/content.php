@@ -32,7 +32,9 @@
 				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'kickstart' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2>
 		<?php } ?>
-
+		<?php 
+			if (is_single()){
+				the_title( '<h5>', '</h5>' ); }?>
 		<div class="entry-content">
 			<?php 
 				if (is_single()){

@@ -1,6 +1,5 @@
 <div id="default-widget-area" class="widget-area">
 	<ul class="xoxo">
-	<?php dynamic_sidebar( 'primary-widget-area' ); ?>
 	<li>
 		<h3 class="widget-title"><span>Get Started</span></h3>
 		<div class="textwidget">
@@ -26,6 +25,7 @@
 		</div>
 	</li>
 	<?php }?>
+	<?php dynamic_sidebar( 'primary-widget-area' ); ?>
 	</ul>
 </div>
 

@@ -19,9 +19,18 @@ Template Name: Right sidebar
 	</div><!--#content -->
 
 	<div id="sidebar_right">
-		<?php get_sidebar(); ?>
-	</div><!--#sidebar_right-->
+		<?php 
+			if(is_page(29)){
+				get_sidebar('partners'); 
+			} else {
+				get_sidebar(); 
+			}
+		?>	</div><!--#sidebar_right-->
 
 	<div class="clear"></div>
 </div><!-- #container -->
 <?php get_footer(); ?>
+
+
+
+
