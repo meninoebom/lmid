@@ -6,7 +6,6 @@
 *	--------------------------------------------------------------------- 
 */
 
-
 // Define directories
 define('MNKY_PATH', get_template_directory_uri());
 define('MNKY_INCLUDE', get_template_directory() . '/inc');
@@ -57,7 +56,4 @@ define( 'RWMB_DIR', trailingslashit( STYLESHEETPATH . '/inc/plugin/meta-box' ) )
 require_once RWMB_DIR . 'meta-box.php';
 // Include the meta box definition (the file where you define meta boxes, see `demo/demo.php`)
 include 'config-meta-boxes.php';
-
 ?>
-
-

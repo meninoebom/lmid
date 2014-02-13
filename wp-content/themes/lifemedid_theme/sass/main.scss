@@ -686,7 +686,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
 #footer-widget-area .widget-title{color:#EAEAEA;}
 #footer-widget-area .sidebar-line{background:#FFF; }
 
-.testimonial-slider-container {width: 100%}
+.testimonial-slider-container {position: relative; margin: 0 4% 0 0; float: left; width: 100%}
 
 
 /* Blog Landing Page */

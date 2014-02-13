@@ -46,3 +46,11 @@ For Custom Meta Boxes
 -https://github.com/rilwis/meta-box/blob/master/demo/demo.php
 
 	new meta boxes are created in .../lifemedid_theme/config-meta-boxes.php
+
+
+#Revolution Slider
+
+The slider's docs are in the theme itself or at least in the zip file downleaded from the theme creators
+
+#Blank white screen when trying to access wp-admin on staging
+http://wordpress.org/support/topic/that-darn-message-again-warning-cannot-modify-header-information
