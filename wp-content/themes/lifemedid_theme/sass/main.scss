@@ -147,7 +147,7 @@ input[type='submit'] {
   margin-top: -18px; 
   @include font($font-family: 'PT Sans', $size: 13px, $font-weight: 500, $line-height: 13px, $color: #fff); 
   @media only screen and (max-width: 1230px) { 
-    position: relative; margin: 0 auto; float: none; top: 0; right: 0;
+    position: relative; margin: 0 auto; float: left; top: 0; right: 0;
   }
   @include respond-to(mobile) {position: relative; margin: 0 auto; float: none; top: 0; right: 0;}
   display: block; 
@@ -550,8 +550,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
     }
   }
 }
-.prod-icon {display: block; text-align: center;}
-.prod-icon span {display: block; text-align: center;}
+.homepage-prod-icon {display: block; text-align: center;}
+.homepage-prod-icon img {max-width: 30px;}
+.homepage-prod-icon span {display: block; text-align: center;}
 .homepage-video-cta {@include font($font-family: 'PT Sans', $size: 13px); text-transform: capitalize;}
 .homepage-graphic-learn-more-link {@include font($font-family: 'PT Sans', $size: 14px); text-transform: capitalize;}
 
@@ -564,23 +565,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bffffff', e
     .rev_slider_wrapper {display: none;}
   }
 
+.prod-page-icon, .solutions-page-icon{ max-width: 50px; max-height: 45px;}
 /* Products page*/
 .prod-page-icon{}
-.prod-page-securereg-id-icon {margin: 0 0 -52px -1px;}
+.prod-page-securereg-id-icon {margin: 0 0 -57px 5px;}
 .prod-page-securereg-link-icon {margin: 0 0 -34px -8px;}
-.prod-page-securehub-physician-icon {margin: 0 0 -44px -7px;}
-.prod-page-hl7-icon {margin: 0 0 -52px -1px;}
-.prod-page-securereg-integrated-icon {margin: 0 0 -47px -1px;}
-.prod-page-ems-gateway-icon {margin: 0 0 -38px -14px;}
+.prod-page-securehub-physician-icon {margin: 0 0 -52px -7px;}
+.prod-page-hl7-icon {margin: 0 0 -52px -5px;}
+.prod-page-securereg-integrated-icon {margin: 0 0 -57px 0px;}
+.prod-page-ems-gateway-icon {margin: 0 0 -38px -7px;}
 .prod-page-patient-id-device-icon {margin: 0 0 -52px -1px;}
-.prod-page-recard-depup-icon {margin: 0 0 -52px -1px;}
+.prod-page-recard-depup-icon {margin: 0 0 -52px -5px;}
 
 /* Solutions page*/
 .solutions-page-icon{}
-.solutions-page-patient-id-mgmt-icon {margin: 0 0 -52px -1px;}
-.solutions-page-patient-access-icon {margin: 0 0 -52px -1px;}
-.solutions-page-hie-integration-icon {margin: 0 0 -52px -1px;}
-.solutions-page-gov-health-systems-icon {margin: 0 0 -52px -1px;}
+.solutions-page-patient-id-mgmt-icon {margin: 0 0 -52px 5px;}
+.solutions-page-patient-access-icon {margin: 0 0 -52px -5px;}
+.solutions-page-hie-integration-icon {margin: 0 0 -52px -5px;}
+.solutions-page-gov-health-systems-icon {margin: 0 0 -52px -5px;}
 .solutions-page-workflow-integration-icon {margin: 0 0 -52px -1px;}
 .solutions-page-practice-mgmt-inter-icon {margin: 0 0 -52px -1px;}
 .solutions-page-regional-health-sys-icon {margin: 0 0 -52px -1px;}

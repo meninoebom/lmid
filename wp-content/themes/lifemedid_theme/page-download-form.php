@@ -130,7 +130,9 @@ Template Name: Gated Downloads Form
 	<?php echo '<div id="title-wrapper"><div class="header-shadow"></div>
 		<div class="page-title size-wrap"><h1>Download';
 			if($_GET["download"] === "whitepaper") { echo " White Papers\n"; echo '';
-			} elseif ($_GET["download"] === "tools") echo " Tools\n"; echo '';
+			} elseif ($_GET["download"] === "tools") { echo " Tools\n"; echo '';
+			} elseif ($_GET["download"] === "calculator") { echo " the Health Savings Calculator\n"; echo '';
+			} else { echo " White Papers and Tools\n"; echo '';}
 	echo '</h1>';
 	if (!ot_get_option('disable_breadcrumbs')){ mnky_breadcrumb(); }
 	echo '<div class="clear"></div></div></div>'; ?>
