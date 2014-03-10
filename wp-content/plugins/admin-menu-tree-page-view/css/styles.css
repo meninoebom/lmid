@@ -146,7 +146,7 @@ span.admin-menu-tree-page-tree_headline {
 	padding-right: 8px;
 	background-position: 15px 2px !important;
 	font-weight: normal;
-	color: #21759B;
+	color: #fff;
 }
 .js.folded #adminmenu li .wp-submenu ul.admin-menu-tree-page-tree li ul li a {
 	padding-left: 27px;

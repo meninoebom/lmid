@@ -11,7 +11,7 @@
 	} ?>
 
 	<title><?php bloginfo('name'); ?>  <?php wp_title('-'); ?></title>
-	
+
 	<?php if (ot_get_option('favicon')){
 		echo '<link rel="shortcut icon" href="'. ot_get_option('favicon') .'" />';
 	} 

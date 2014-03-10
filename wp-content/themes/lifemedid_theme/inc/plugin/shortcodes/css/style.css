@@ -107,9 +107,9 @@ border-color:transparent transparent transparent  #e7e7e7; border-color:rgba(255
 
 /* Testimonial */
 .testimonial-wrapper {width:100%; margin:0 0 30px 0; position:relative; max-width:940px;}
-.testimonial-wrapper .testimonial-content{display:block; background:#F3F3F3; padding:25px 20px 25px 25px;}
+.testimonial-wrapper .testimonial-content{display:block; background:#F3F3F3; padding:25px 20px 25px 25px; line-height: 1.5;}
 .testimonial-wrapper .testimonial-content p:last-child{margin:0px;}
-.testimonial-author {margin-top:-8px; font-size:12px;}
+.testimonial-author {margin-top:-2px; font-size:15px; text-indent: -33px; padding-left: 34px;}
 .testimonial-author i{font-size:16px; margin:0 10px 0 7px;}
 .testimonial-arrow{display:block; width:0; height:0; margin-left:27px; border-style: solid; border-width:6px 9px 9px 13px;
 border-color:#F3F3F3 transparent transparent  #F3F3F3; border-color:#F3F3F3  rgba(255,255,255,0)  rgba(255,255,255,0)  #F3F3F3;}
@@ -318,7 +318,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38ffffff', e
 
 /* Staff */
 /*.staff-wrapper img{margin-bottom:5px;}*/
-.person-name{font-weight:bold; font-size:17px; color:#444; text-transform: uppercase;}
+.person-name{font-weight:bold; font-size:17px; color:#444; text-transform: uppercase; letter-spacing: 0.06em;}
 .person-name i{color: #DDDDDD; float: right; font-size: 42px; line-height: 1;}
 .person-title{font-size:13px; padding-bottom:10px; border-bottom:1px solid #E7E7E7;}
 .person-description{padding-top:15px;}

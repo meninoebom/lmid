@@ -1,15 +1,16 @@
 </div><!-- #wrapper -->
-
 <div id="footer-contact">
-	<div>
+	<div class="columns-4 size-wrap">
 		<div class="footer-contact-header"><h2>Contact</h2></div>
-		<div class="footer-contact-content">
-			<p>Interested in learning more about the LifeMed ID solutions or seeing a demo? <a class="footer-contact-link" href="">Let us know how to contact you</a> and we’ll be in touch.</p>
+		<div class="footer-contact-content column column-3-4">
+			<p>Interested in learning more about the LifeMed ID solutions or seeing a demo?
+				<?php echo '<a class="footer-contact-link" href="'.site_url().'/contact/"> ';?>Let us know how to contact you</a> and we’ll be in touch.</p>
 		</div>
-		<a href="" class="footer-contact-btn">Lets Talk <?php echo '<img class="footer-contact-btn-down-caret" src="'.get_template_directory_uri().'/images/down-caret.png" />'?> </a>
+		<div class="column column-1-4 column-last">
+			<?php echo '<a class="footer-contact-btn" href="'.site_url().'/contact/">Lets Talk<img class="footer-contact-btn-down-caret" src="'.get_template_directory_uri().'/images/down-caret.png" />'; ?> </a>
+		</div>
 	</div>
 </div>
-
 <?php 
 	if (!ot_get_option('footer_widgets')) {
 		get_sidebar('footer'); 

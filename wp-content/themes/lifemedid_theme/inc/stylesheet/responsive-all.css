@@ -39,7 +39,7 @@
 
 		/* Content */
 		#wrapper #content_full, #wrapper #content_right, #wrapper #content_left  {width:100%;}	
-		.entry-content img { max-width: 100%; height: auto; } 
+		/*.entry-content img { max-width: 100%; height: auto; } */
 		.alignnone, .alignleft { margin: 5px 15px 5px 0px; }
 		.alignright { margin: 5px 0px 5px 15px;}
 		.gallery .gallery-item{padding-right:20px;}

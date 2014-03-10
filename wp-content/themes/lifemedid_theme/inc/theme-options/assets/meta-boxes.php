@@ -267,7 +267,7 @@ $portfolio_opt_meta_box = array(
 	)
   );
   
-//ot_register_meta_box( $portfolio_opt_meta_box );
+ot_register_meta_box( $portfolio_opt_meta_box );
 
 $portfolio_post_opt_meta_box = array(
     'id'          => 'portfolio_post_opt_meta_box',

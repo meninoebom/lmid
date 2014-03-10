@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
 			});
 			
 			//clone the overview page links because the orginal ones are no longer triggering a new location
-			$("#primary-main-menu .menu-item-has-children").each(function(){
+			$("[title='about-us']").parent().each(function(){
 				if($(this).data("cloned") == true) return;
 				$(this).data("cloned", true);
 				$elem = $(this).clone().removeClass("menu-item-has-children").addClass("cloned-link");

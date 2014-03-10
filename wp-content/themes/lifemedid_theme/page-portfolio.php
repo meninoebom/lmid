@@ -98,7 +98,7 @@ Template Name: Portfolio
 							} else {
 								echo '<p>', get_excerpt(65) .'</p>';
 							}
-						echo '<div class="link-button"><a href="', the_permalink() .'">'. __('Learn More', 'kickstart') .'</a></div>
+						echo '<div class="link-button"><a href="', get_post_meta($post->ID, 'portfolio_video_link', true) .'">'. __('Watch the Video', 'kickstart') .'</a></div>
 					</div>
 					<div class="mask">';
 						if (get_post_meta($post->ID, 'portfolio_video_link', true)) {

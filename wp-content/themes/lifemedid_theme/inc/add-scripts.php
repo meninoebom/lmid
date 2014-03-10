@@ -7,6 +7,9 @@ function add_scripts() {
 	
 	// Theme scripts
 	wp_enqueue_script('main-scripts', MNKY_JS . '/main.js', array('jquery'), '', true);
+
+	// Theme scripts
+	wp_enqueue_script('jquery-fittext', MNKY_JS . '/jquery.fittext.js', array('jquery'), '', true);
 	
 	// Responsive layout scripts
 	if (ot_get_option('responsive_layout') == 'responsive_mobile' || ot_get_option('responsive_layout') == 'responsive_all') {

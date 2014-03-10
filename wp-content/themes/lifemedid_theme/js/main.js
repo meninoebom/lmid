@@ -1,5 +1,11 @@
 jQuery(document).ready(function($) {
+
+	//fancyboxy
+	$("a#sample-calc").fancybox({'autoDimensions': true});
 	
+	//init fit text
+    $(".homepage-hero-inner .mobile-cta ").fitText(3.5, { maxFontSize: '18px' });
+
 	// Add class to menu parents
 	$("#primary-main-menu li a").each(function() {
 		if ($(this).next().length > 0) {
